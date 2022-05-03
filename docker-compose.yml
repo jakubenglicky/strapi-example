@@ -1,0 +1,10 @@
+services:
+  strapi:
+    image: node:16.13
+    volumes:
+      - ./:/srv/app
+    working_dir: /srv/app
+    command: npm run develop
+    ports:
+     - 80:1337
+    env_file: .env
